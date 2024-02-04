@@ -39,7 +39,7 @@ package() {
   else
     local _nocomp=''
   fi
-  for _file in $(find firmware); do
+  for _file in $(find firmware/*); do
     grep -q "^${_file}\(.zst\|/\)\?$" linux-firmware.list && continue
     if [[ -L "${_file}" ]]; then
       echo "L: ${_file}"
