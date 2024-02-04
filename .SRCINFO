@@ -1,17 +1,16 @@
 pkgbase = linux-firmware-orangepi-git
 	pkgdesc = Firmware files for Linux - Orange Pi specific firmware
-	pkgver = 20230828.b2809d6
+	pkgver = 20230828.b2809d6.20240115.9b6d0b08
 	pkgrel = 1
 	url = https://github.com/orangepi-xunlong/firmware
-	arch = aarch64
+	arch = any
 	license = GPL2
 	license = GPL3
 	license = custom
 	makedepends = git
-	provides = linux-firmware=20230828.b2809d6
-	provides = linux-firmware-orangepi=20230828.b2809d6
-	conflicts = linux-firmware
+	depends = linux-firmware
 	conflicts = linux-firmware-orangepi
+	replaces = linux-firmware-orangepi
 	options = !strip
 	source = git+https://github.com/orangepi-xunlong/firmware.git
 	sha256sums = SKIP
